@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?r6byy9');
+	src:url('fonts/icomoon.eot?#iefixr6byy9') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?r6byy9') format('truetype'),
+		url('fonts/icomoon.woff?r6byy9') format('woff'),
+		url('fonts/icomoon.svg?r6byy9#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="lhh-"], [class*=" lhh-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.lhh-iconfont-community:before {
+	content: "\e600";
+}
+.lhh-iconfont-communityfill:before {
+	content: "\e601";
+}
+.lhh-iconfont-we:before {
+	content: "\e602";
+}
+.lhh-iconfont-wefill:before {
+	content: "\e603";
+}
+.lhh-iconfont-message:before {
+	content: "\e604";
+}
+.lhh-iconfont-home:before {
+	content: "\e605";
+}
+.lhh-iconfont-homefill:before {
+	content: "\e606";
+}
+.lhh-iconfont-cartfill:before {
+	content: "\e607";
+}
+.lhh-iconfont-cart:before {
+	content: "\e608";
+}
+.lhh-iconfont-scan:before {
+	content: "\e609";
+}
+.lhh-iconfont-myfill:before {
+	content: "\e60a";
+}
+.lhh-iconfont-my:before {
+	content: "\e60b";
+}
