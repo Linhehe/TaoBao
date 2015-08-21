@@ -20,7 +20,14 @@
     </div>
     </ion-header-bar>
 
-    <ion-content class="padding">
+    <ion-content>
+
+      <!--Image-Carousel-->
+      <ion-slide-box delegate-handle="image-viewer" on-slide-changed="slideChanged(index)" auto-play="true" does-continue="true">
+        <ion-slide ng-repeat="slide in files">
+          <img src="{{slide}}" style="height: 200px; width: 100%;">
+        </ion-slide>
+      </ion-slide-box>
 
       <div class="list card">
         <div class="item item-divider">Recent Updates</div>

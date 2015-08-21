@@ -1,6 +1,19 @@
 angular.module('starter.controllers', [])
 
-.controller('IndexCtrl', function($scope) {})
+.controller('IndexCtrl', function($scope,$ionicSlideBoxDelegate) {
+    //
+    $scope.files = ["img/0.jpg", "img/1.jpg", "img/0.jpg"];
+    $ionicSlideBoxDelegate.$getByHandle('image-viewer').update();
+    //$scope.getFiles = function() {
+    //  Files.query({
+    //    //some parameters
+    //
+    //  }).$promise.then(function(data) {
+    //      $scope.files = data;
+    //      $ionicSlideBoxDelegate.$getByHandle('image-viewer').update();
+    //    });
+    //}
+})
 
 .controller('WeitaoCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
