@@ -23,35 +23,104 @@
     <ion-content>
 
       <!--Image-Carousel-->
-      <ion-slide-box delegate-handle="image-viewer" on-slide-changed="slideChanged(index)" auto-play="true" does-continue="true">
-        <ion-slide ng-repeat="slide in files">
-          <img src="{{slide}}" style="height: 200px; width: 100%;">
+      <ion-slide-box pager-click="navSlide(index)" auto-play="true" does-continue="true">
+        <ion-slide ng-repeat="(key,value) in Photos" ng-click="dianji()">
+          <img ng-src="{{value.src}}" style="height: 150px; width: 100%;">
         </ion-slide>
       </ion-slide-box>
 
-      <div class="list card">
-        <div class="item item-divider">Recent Updates</div>
-        <div class="item item-body">
-          <div>
-            There is a fire in <b>sector 3</b>
+      <!--Functional Module-->
+      <div style="height: 180px; width: 100%; padding-top: 10px; padding-left: 20px; padding-right: 20px;">
+        <!--1-->
+        <ul ng-repeat="(key,value) in modules">
+          <li style="float: left; heigth: 50%; width: 20%;">
+            <div align="center">
+              <img src="{{value.img}}" style="width: 70%; height: 70%;"/>
+            </div>
+            <div align="center">
+              {{value.title}}
+            </div>
+          </li>
+        </ul>
+        <!--2-->
+        <ul ng-repeat="(key,value) in modules">
+          <li style="float: left; heigth: 50%; width: 20%; margin-top: 15px;">
+            <div align="center">
+              <img src="{{value.img}}" style="width: 70%; height: 70%;"/>
+            </div>
+            <div align="center">
+              {{value.title}}
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <hr color="#EEEEEE" style="width: 95%; height: 0.1px;"/>
+
+      <!--淘宝头条-->
+      <div style="width: 100%; height: 35px; padding-left: 20px; padding-right: 20px;">
+        <img src="" style="background-color: #007aff; height: 90%; width: 20%; float: left;"/>
+        <hr color=#EEEEEE style="margin: 0px; width: 0.1px; height: 30px; float: left; margin-left: 10px; margin-right: 10px;">
+        <!--垂直方向轮播-->
+        <div id="ann_box" style="width:100px; overflow:hidden; height:20px; float: left; width: 70%; margin-top: 7.5px;">
+          <div id="a1" class="ann" ng-repeat="(key,value) in feadlines" style="margin-bottom: 15px;">
+            <span style="color: #DC3947; border: 1px solid #DC3947; border-radius: 4px; padding: 1px;">{{value.type}}</span>
+            <span>{{value.title}}</span>
           </div>
         </div>
       </div>
-      <div class="list card">
-        <div class="item item-divider">Health</div>
-        <div class="item item-body">
-          <div>
-            You ate an apple today!
+
+      <hr color="#EEEEEE" style="width: 100%; height: 10px; margin-bottom: 0px;"/>
+
+      <!--淘抢购 有好货 爱逛街 每日首发-->
+      <div style="height: 180px; margin-top: 0px; padding-top: 0px;">
+        <!--淘抢购-->
+        <div style="float: left; height: 100%; width: 43%; padding-left: 10px; padding-top: 20px; border-right: 1px solid #EEEEEE">
+          <div style="height: 50%;">
+            <div style="height: 40%;">
+              <img src="img/iconfont-icon69.png" style="height: 100%; float: left;"/>
+              <span style="color: #D42318; font-size: 150%; float: left; margin-top: 5px;">淘抢购</span>
+            </div>
+            <div style="font-size: 100%; color: #9F9F9F; float: left; height: 20%;">荣耀6标准版 超强配置</div>
+            <div style="float: left; margin-top: 10px; height: 40%;">
+              <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">01</span>
+              <span style="font-size: 100%;">:</span>
+              <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">15</span>
+              <span style="font-size: 100%;">:</span>
+              <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">52</span>
+            </div>
+          </div>
+          <img src="img/ionic.png" style="height: 50%; float: left;"/>
+        </div>
+        <div style="float: left; height: 100%; width: 57%;">
+          <!--有好货-->
+          <div style="width: 100%; height: 45%; padding-left: 10px; padding-top: 20px; border-bottom: 1px solid #EEEEEE; padding-bottom: 5px;">
+            <div style="width: 65%;">
+              <div>
+                <img src="img/iconfont-appreciate.png" style="width: 25px; float: left;"/>
+                <span style="color: #2BB8DB; font-size: 20px; float: left; margin-top: 5px;">有好货</span>
+              </div>
+              <div style="font-size: 15px; color: #9F9F9F; float: left;">嘿！下拉刷新试试</div>
+            </div>
+            <img src="img/ionic.png" style="width: 35%; height: 100%;"/>
+          </div>
+          <div style="width: 100%; height: 55%;">
+            <!--爱逛街-->
+            <div style="float: left; width: 50%; height: 100%; padding-left: 10px;">
+              <span style="color: #FB2369; font-size: 17px; float: left; margin-top: 5px;">爱逛街</span>
+              <div style="font-size: 10px; color: #9F9F9F; float: left;">每天都有新款上！</div>
+              <img src="img/ionic.png" style="height: 50%; width: 90%;"/>
+            </div>
+            <!--每日首发-->
+            <div style="float: left; width: 50%; height: 100%; padding-left: 10px; border-left: 1px solid #EEEEEE;">
+              <span style="color: #54B286; font-size: 17px; float: left; margin-top: 5px;">每日首发</span>
+              <div style="font-size: 10px; color: #9F9F9F; float: left;">秋季新款抢先</div>
+              <img src="img/ionic.png" style="height: 50%; width: 90%;"/>
+            </div>
           </div>
         </div>
       </div>
-      <div class="list card">
-        <div class="item item-divider">Upcoming</div>
-        <div class="item item-body">
-          <div>
-            You have <b>29</b> meetings on your calendar tomorrow.
-          </div>
-        </div>
-      </div>
+
+
     </ion-content>
   </ion-view>

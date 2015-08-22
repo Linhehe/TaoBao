@@ -59,3 +59,43 @@
 .lhh-iconfont-my:before {
 	content: "\e60b";
 }
+
+/*.slider{*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+/*}*/
+.slider-pager {
+  top: initial;
+  bottom: 20px !important;
+  text-align: right;
+  font-size: 8px;
+  padding-right: 25px !important;
+  /*background-color: #11c1f3;*/
+}
+
+.slider-pager-page.active
+{
+  color: #FC461F !important;
+  /*width: 10px !important;*/
+  margin-right: 1px !important;
+  margin-left: 0px !important;
+}
+
+.slider-pager-page{
+  color: white !important;
+  /*font-size: 5px !important;*/
+  /*width: 5px !important;*/
+  padding: 0 !important;
+  margin-left: 1px !important;
+  margin-right: 0px !important;
+}
+
+.tabs-icon-top > .tabs{
+  background-color: #F8F6F6 !important;
+}
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+  color: #FC461F !important;
+}
