@@ -66,7 +66,17 @@ angular.module('starter.controllers', [])
       {type: '热门', title:'799红米Note配置屌炸天'},
       {type: '推荐', title:'欧美运营商可以让你年换iPhone'},
       {type: '最新', title:'华为Mate8参数/外观曝光'}
-    ]
+    ];
+    //
+    $scope.time = {second: 60};
+    setInterval(function(){
+      $scope.time.second--;
+      if($scope.time.second == 0){
+        $scope.time.second = 60;
+      }
+    }, 1000);
+    var p = $timeout(function(){console.log('haha')}, 5000);
+    p.then(function(){console.log('x')});
 })
 
 .controller('WeitaoCtrl', function($scope, Chats) {
