@@ -115,4 +115,26 @@ angular.module('starter.controllers', [])
     var screenWidth = window.innerWidth;
     $scope.settingHeight = screenWidth*0.8;
     console.log(screenWidth*0.8);
+    //
+    $scope.orderForms = [
+      {icon: 'img/me/iconfont-pay.png', title: '待付款'},
+      {icon: 'img/me/iconfont-send.png', title: '待发货'},
+      {icon: 'img/me/iconfont-deliver.png', title: '待收货'},
+      {icon: 'img/me/iconfont-evaluate.png', title: '待评价'},
+      {icon: 'img/me/iconfont-refund.png', title: '退款/售后'}
+    ];
+    //
+    $scope.lists = [
+      {icon: 'img/list/iconfont-form.png', title: '全部订单', content: '查看全部已购宝贝', right: 'img/list/iconfont-right.png'},
+      {hr: true},
+      {icon: 'img/list/iconfont-form.png', title: '每日赢宝箱', content: '每天做任务赢宝箱', right: 'img/list/iconfont-right.png'},
+      {icon: 'img/list/iconfont-friend.png', title: '我和好友的分享', content: '', right: 'img/list/iconfont-right.png'},
+      {icon: 'img/list/iconfont-ticket.png', title: '我的卡卷包', content: '您有1张网店卷', right: 'img/list/iconfont-right.png'},
+      {icon: 'img/list/iconfont-mobile.png', title: '通讯助手', content: '查话费享专属权益', right: 'img/list/iconfont-right.png'},
+      {hr: true},
+      {icon: 'img/list/iconfont-taoxiaopu.png', title: '我是商家', content: '免费开店，轻松赚钱', right: 'img/list/iconfont-right.png'},
+      {hr: true},
+      {icon: 'img/list/iconfont-question.png', title: '帮助与反馈', content: '', right: 'img/list/iconfont-right.png'},
+      {hr: true}
+    ]
 });
