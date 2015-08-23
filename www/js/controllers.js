@@ -110,4 +110,9 @@ angular.module('starter.controllers', [])
 
 .controller('MeCtrl', function($scope) {
     //
+    $scope.screenHeight = window.innerHeight;
+    //
+    var screenWidth = window.innerWidth;
+    $scope.settingHeight = screenWidth*0.8;
+    console.log(screenWidth*0.8);
 });

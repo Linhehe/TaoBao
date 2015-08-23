@@ -1,5 +1,36 @@
-<ion-view view-title="Me">
+<ion-view hide-nav-bar="true">
   <ion-content>
-    <h1>Me Page</h1>
+    <div ng-style="{height: screenHeight + 'px'}">
+      <div style="height: 24%; width: 100%; background-color: coral;">
+        <!--消息按钮-->
+        <i class="lhh-iconfont-message" style="font-size: 140%; color: white; background-color: black; opacity: 0.5; border-radius: 50%; padding: 1%; float: right; margin-top: 4%; margin-right: 4%;"></i>
+        <!--设置按钮-->
+        <span style="color: white; font-weight: bold; font-size: 100%; background-color: black; opacity: 0.5; border-radius: 20px; padding: 1% 2%; float: right; margin-top: 4%; margin-right: 4%;">设置</span>
+        <!--头像-->
+        <img src="img/ionic.png" style="width: 22%; border-radius: 50%; position: absolute; top: 17%; left: 4%;"/>
+        <!--昵称-->
+        <div style="background-color: #009689; height: 5%; width: 30%; position: absolute; top: 17%; left: 30%;"></div>
+        <!--vip 标识-->
+        <img src="img/ionic.png" style="height: 5%; position: absolute; top: 17%; left: 62%;"/>
+        <!--二维码-->
+        <img src="img/ionic.png" style="height: 5%; position: absolute; top: 17%; right: 4%;"/>
+      </div>
+      <div style="height: 8%; width: 100%; background-color: cornsilk;">
+        <div style="width: 75%; height: 100%; float: right; padding-top: 1%;">
+          <div style="height: 90%; width: 33%; float: right;">
+            <div align="center">66</div>
+            <div align="center" style="font-size: 90%;">我的足迹</div>
+          </div>
+          <div style="height: 90%; width: 33%; float: right; border-left: 1px solid #EEEEEE; border-right: 1px solid #EEEEEE; padding-left: 1%; padding-right: 1%;">
+            <div align="center">66</div>
+            <div align="center" style="font-size: 90%;">收藏的店铺</div>
+          </div>
+          <div style="height: 90%; width: 33%; float: right; padding-left: 1%; padding-right: 1%;">
+            <div align="center">666</div>
+            <div align="center" style="font-size: 90%;">收藏的宝贝</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
