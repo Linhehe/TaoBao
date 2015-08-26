@@ -3,124 +3,127 @@
   <ion-header-bar style="background-color: #FC461F; height: 8%;">
     <!--scan-->
     <div style="display: block;">
-      <i class="lhh-iconfont-scan" style="font-size: 30px; color: white; margin-left: 10px;"></i>
-      <span style="color: white; margin-left: 5px; font-weight: bold; position: absolute; top: 33px; left: 5px;">扫一扫</span>
+      <i class="lhh-iconfont-scan" style="font-size: 180%; color: white; margin-left: 3vw;"></i>
+      <span style="color: white; font-weight: bold; position: absolute; top: 4.5vh; left: 2.5vw; font-size: 90%;">扫一扫</span>
     </div>
     <!--Search-->
     <div style="height: 90%; width: 60%; margin-left: 10%; margin-right: 10%;">
-      <label class="item-input" style="background-color: #D22F18; padding-left: 15%; padding-right: 15%; height: 100%;">
-        <img src="img/iconfont-search.png" style="width: 25px;"/>
-        <input type="search" style="padding: 0px; font-size: 20px; font-weight: bold; color: white; background-color: transparent; vertical-align:middle; heigth: 80%; line-height:80%; width: 50%;" value="生机勃勃的肉肉"/>
+      <label class="item-input" style="background-color: #D22F18; padding-left: 13%; padding-right: 13%; height: 100%;">
+        <img src="img/iconfont-search.png" style="width: 6vw;"/>
+        <input type="search" style="padding: 0px; font-size: 5vw; font-weight: bold; color: white; background-color: transparent; vertical-align:middle; heigth: 80%; line-height:80%; width: 50%;" value="生机勃勃的肉肉"/>
       </label>
     </div>
       <!--Message-->
     <div style="display: block;">
-      <i class="lhh-iconfont-message" style="font-size: 30px; color: white; margin-right: 10px;"></i>
-      <span style="color: white; margin-left: 5px; font-weight: bold; position: absolute; top: 33px; right: 18px;">消息</span>
+      <i class="lhh-iconfont-message" style="font-size: 180%; color: white; margin-right: 3vw;"></i>
+      <span style="color: white; font-weight: bold; position: absolute; top: 4.5vh; right: 4.8vw; font-size: 90%;">消息</span>
     </div>
     </ion-header-bar>
 
     <ion-content>
 
-      <!--Image-Carousel-->
-      <ion-slide-box pager-click="navSlide(index)" auto-play="true" does-continue="true">
-        <ion-slide ng-repeat="(key,value) in Photos" ng-click="dianji()">
-          <img ng-src="{{value.src}}" style="height: 150px; width: 100%;">
-        </ion-slide>
-      </ion-slide-box>
+      <div ng-style="{height: screenHeight + 'px'}">
 
-      <!--Functional Module-->
-      <div style="height: 180px; width: 100%; padding-top: 10px; padding-left: 20px; padding-right: 20px;">
-        <!--1-->
-        <ul ng-repeat="(key,value) in modules">
-          <li style="float: left; heigth: 50%; width: 20%;">
-            <div align="center">
-              <img src="{{value.img}}" style="width: 70%; height: 70%;"/>
-            </div>
-            <div align="center">
-              {{value.title}}
-            </div>
-          </li>
-        </ul>
-        <!--2-->
-        <ul ng-repeat="(key,value) in modules">
-          <li style="float: left; heigth: 50%; width: 20%; margin-top: 15px;">
-            <div align="center">
-              <img src="{{value.img}}" style="width: 70%; height: 70%;"/>
-            </div>
-            <div align="center">
-              {{value.title}}
-            </div>
-          </li>
-        </ul>
-      </div>
+        <!--Image-Carousel-->
+        <ion-slide-box pager-click="navSlide(index)" auto-play="true" does-continue="true">
+          <ion-slide ng-repeat="(key,value) in Photos" ng-click="dianji()">
+            <img ng-src="{{value.src}}" style="height: 20vh; width: 100%;">
+          </ion-slide>
+        </ion-slide-box>
 
-      <hr color="#EEEEEE" style="width: 95%; height: 0.1px;"/>
-
-      <!--淘宝头条-->
-      <div style="width: 100%; height: 35px; padding-left: 20px; padding-right: 20px;">
-        <img src="" style="background-color: #007aff; height: 90%; width: 20%; float: left;"/>
-        <hr color=#EEEEEE style="margin: 0px; width: 0.1px; height: 30px; float: left; margin-left: 10px; margin-right: 10px;">
-        <!--垂直方向轮播-->
-        <div id="ann_box" style="width:100px; overflow:hidden; height:20px; float: left; width: 70%; margin-top: 7.5px;">
-          <div id="a1" class="ann" ng-repeat="(key,value) in feadlines" style="margin-bottom: 15px;">
-            <span style="color: #DC3947; border: 1px solid #DC3947; border-radius: 4px; padding: 1px;">{{value.type}}</span>
-            <span>{{value.title}}</span>
-          </div>
-        </div>
-      </div>
-
-      <hr color="#EEEEEE" style="width: 100%; height: 10px; margin-bottom: 0px;"/>
-
-      <!--淘抢购 有好货 爱逛街 每日首发-->
-      <div style="height: 180px; margin-top: 0px; padding-top: 0px;">
-        <!--淘抢购-->
-        <div style="float: left; height: 100%; width: 43%; padding-left: 10px; padding-top: 20px; border-right: 1px solid #EEEEEE">
-          <div style="height: 50%;">
-            <div style="height: 40%;">
-              <img src="img/iconfont-icon69.png" style="height: 100%; float: left;"/>
-              <span style="color: #D42318; font-size: 150%; float: left; margin-top: 5px;">淘抢购</span>
-            </div>
-            <div style="font-size: 100%; color: #9F9F9F; float: left; height: 20%;">荣耀6标准版 超强配置</div>
-            <div style="float: left; margin-top: 10px; height: 40%;">
-              <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">01</span>
-              <span style="font-size: 100%;">:</span>
-              <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">15</span>
-              <span style="font-size: 100%;">:</span>
-              <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">{{time.second}}</span>
-            </div>
-          </div>
-          <img src="img/ionic.png" style="height: 50%; float: left;"/>
-        </div>
-        <div style="float: left; height: 100%; width: 57%;">
-          <!--有好货-->
-          <div style="width: 100%; height: 45%; padding-left: 10px; padding-top: 20px; border-bottom: 1px solid #EEEEEE; padding-bottom: 5px;">
-            <div style="width: 65%;">
-              <div>
-                <img src="img/iconfont-appreciate.png" style="width: 25px; float: left;"/>
-                <span style="color: #2BB8DB; font-size: 20px; float: left; margin-top: 5px;">有好货</span>
+        <!--Functional Module-->
+        <div style="height: 26vh; width: 100%; padding-top: 1vh; padding-left: 2vw; padding-right: 2vw;">
+          <!--1-->
+          <ul ng-repeat="(key,value) in modules">
+            <li style="float: left; heigth: 12vh; width: 19vw;">
+              <div align="center">
+                <img src="{{value.img}}" style="width: 70%; height: 70%;"/>
               </div>
-              <div style="font-size: 15px; color: #9F9F9F; float: left;">嘿！下拉刷新试试</div>
-            </div>
-            <img src="img/ionic.png" style="width: 35%; height: 100%;"/>
-          </div>
-          <div style="width: 100%; height: 55%;">
-            <!--爱逛街-->
-            <div style="float: left; width: 50%; height: 100%; padding-left: 10px;">
-              <span style="color: #FB2369; font-size: 17px; float: left; margin-top: 5px;">爱逛街</span>
-              <div style="font-size: 10px; color: #9F9F9F; float: left;">每天都有新款上！</div>
-              <img src="img/ionic.png" style="height: 50%; width: 90%;"/>
-            </div>
-            <!--每日首发-->
-            <div style="float: left; width: 50%; height: 100%; padding-left: 10px; border-left: 1px solid #EEEEEE;">
-              <span style="color: #54B286; font-size: 17px; float: left; margin-top: 5px;">每日首发</span>
-              <div style="font-size: 10px; color: #9F9F9F; float: left;">秋季新款抢先</div>
-              <img src="img/ionic.png" style="height: 50%; width: 90%;"/>
+              <div align="center" style="margin-top: 0vh">
+                {{value.title}}
+              </div>
+            </li>
+          </ul>
+          <!--2-->
+          <ul ng-repeat="(key,value) in modules">
+            <li style="float: left; heigth: 12vh; width: 19vw; margin-top: 1vh;">
+              <div align="center">
+                <img src="{{value.img}}" style="width: 70%; height: 70%;"/>
+              </div>
+              <div align="center">
+                {{value.title}}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <hr color="#EEEEEE" style="width: 95%; height: 0.1px; margin-bottom: 0;"/>
+
+        <!--淘宝头条-->
+        <div style="width: 100%; height: 5vh; padding-left: 2vw; padding-right: 2vw; margin-bottom: 0; padding-bottom: 0;">
+          <img src="" style="background-color: #007aff; height: 80%; width: 18vw; float: left; margin-top: 1vh;"/>
+          <hr color=#EEEEEE style="margin: 0px; width: 0.1px; height: 80%; float: left; margin-left: 10px; margin-right: 10px; margin-top: 0.8vh;">
+          <!--垂直方向轮播-->
+          <div id="ann_box" style="overflow:hidden; height:5vh; float: left; width: 65vw; margin-top: 1vh; margin-bottom: 0;">
+            <div id="a1" class="ann" ng-repeat="(key,value) in feadlines" style="margin-bottom: 10vh;">
+              <span style="color: #DC3947; border: 1px solid #DC3947; border-radius: 4px; padding: 1px; font-size: 2vh">{{value.type}}</span>
+              <span style="font-size: 2vh">{{value.title}}</span>
             </div>
           </div>
         </div>
-      </div>
 
+        <hr color="#EEEEEE" style="width: 100%; height: 10px; margin-bottom: 0px; margin-top: 0px;"/>
+
+        <!--淘抢购 有好货 爱逛街 每日首发-->
+        <div style="height: 30vh; margin-top: 0px; padding-top: 0px;">
+          <!--淘抢购-->
+          <div style="float: left; height: 100%; width: 43%; padding-left: 10px; padding-top: 20px; border-right: 1px solid #EEEEEE">
+            <div style="height: 50%;">
+              <div style="height: 40%;">
+                <img src="img/iconfont-icon69.png" style="height: 100%; float: left;"/>
+                <span style="color: #D42318; font-size: 150%; float: left; margin-top: 5px;">淘抢购</span>
+              </div>
+              <div style="font-size: 100%; color: #9F9F9F; float: left; height: 20%;">荣耀6标准版 超强配置</div>
+              <div style="float: left; margin-top: 10px; height: 40%;">
+                <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">01</span>
+                <span style="font-size: 100%;">:</span>
+                <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">15</span>
+                <span style="font-size: 100%;">:</span>
+                <span style="font-size: 100%; background-color: #333333; color: white; padding-top: 4px; padding-bottom: 4px; border-radius: 4px; padding-left: 2px; padding-right: 2px;">{{time.second}}</span>
+              </div>
+            </div>
+            <img src="img/ionic.png" style="height: 50%; float: left;"/>
+          </div>
+          <div style="float: left; height: 100%; width: 57%;">
+            <!--有好货-->
+            <div style="width: 100%; height: 45%; padding-left: 2vw; padding-top: 2vh; border-bottom: 1px solid #EEEEEE; padding-bottom: 2vh;">
+              <div style="width: 65%;">
+                <div>
+                  <img src="img/iconfont-appreciate.png" style="width: 6vw; float: left;"/>
+                  <span style="color: #2BB8DB; font-size: 5vw; float: left;">有好货</span>
+                </div>
+                <div style="font-size: 3vw; color: #9F9F9F; float: left;">嘿！下拉刷新试试 --></div>
+              </div>
+              <img src="img/ionic.png" style="width: 15vw; height: 100%; margin-left: 2vw;"/>
+            </div>
+            <div style="width: 100%; height: 55%;">
+              <!--爱逛街-->
+              <div style="float: left; width: 50%; height: 100%; padding-left: 10px;">
+                <span style="color: #FB2369; font-size: 5vw; float: left; margin-top: 5px;">爱逛街</span>
+                <div style="font-size: 2vw; color: #9F9F9F; float: left;">每天都有新款上！</div>
+                <img src="img/ionic.png" style="height: 50%; width: 90%;"/>
+              </div>
+              <!--每日首发-->
+              <div style="float: left; width: 50%; height: 100%; padding-left: 10px; border-left: 1px solid #EEEEEE;">
+                <span style="color: #54B286; font-size: 5vw; float: left; margin-top: 5px;">每日首发</span>
+                <div style="font-size: 3vw; color: #9F9F9F; float: left;">秋季新款抢先</div>
+                <img src="img/ionic.png" style="height: 50%; width: 90%;"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </ion-content>
   </ion-view>

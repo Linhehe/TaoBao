@@ -2,6 +2,8 @@ angular.module('starter.controllers', [])
 
 .controller('IndexCtrl', function($scope,$ionicSlideBoxDelegate,$timeout) {
     //
+    $scope.screenHeight = window.innerHeight;
+    //
     $scope.Photos = [
       {'src': 'http://lorempixel.com/500/500'},
       {'src': 'http://lorempixel.com/600/500'},
@@ -125,16 +127,16 @@ angular.module('starter.controllers', [])
     ];
     //
     $scope.lists = [
-      {icon: 'img/list/iconfont-form.png', title: '全部订单', content: '查看全部已购宝贝', right: 'img/list/iconfont-right.png'},
-      {hr: true},
-      {icon: 'img/list/iconfont-form.png', title: '每日赢宝箱', content: '每天做任务赢宝箱', right: 'img/list/iconfont-right.png'},
-      {icon: 'img/list/iconfont-friend.png', title: '我和好友的分享', content: '', right: 'img/list/iconfont-right.png'},
-      {icon: 'img/list/iconfont-ticket.png', title: '我的卡卷包', content: '您有1张网店卷', right: 'img/list/iconfont-right.png'},
-      {icon: 'img/list/iconfont-mobile.png', title: '通讯助手', content: '查话费享专属权益', right: 'img/list/iconfont-right.png'},
-      {hr: true},
-      {icon: 'img/list/iconfont-taoxiaopu.png', title: '我是商家', content: '免费开店，轻松赚钱', right: 'img/list/iconfont-right.png'},
-      {hr: true},
-      {icon: 'img/list/iconfont-question.png', title: '帮助与反馈', content: '', right: 'img/list/iconfont-right.png'},
-      {hr: true}
+      //{icon: 'img/list/iconfont-form.png', title: '全部订单', content: '查看全部已购宝贝', right: 'img/list/iconfont-right.png', hr: true},
+      //{hr: true},
+      {icon: 'img/list/iconfont-form.png', title: '每日赢宝箱', content: '每天做任务赢宝箱', right: 'img/list/iconfont-right.png', color: '#F95C00'},
+      {icon: 'img/list/iconfont-friend.png', title: '我和好友的分享', content: '', right: 'img/list/iconfont-right.png', color: '#36AB50'},
+      {icon: 'img/list/iconfont-ticket.png', title: '我的卡卷包', content: '您有1张网店卷', right: 'img/list/iconfont-right.png', color: '#30C5AE'},
+      {icon: 'img/list/iconfont-mobile.png', title: '通讯助手', content: '查话费享专属权益', right: 'img/list/iconfont-right.png', color: '#F96000'},
+      //{hr: true},
+      //{icon: 'img/list/iconfont-taoxiaopu.png', title: '我是商家', content: '免费开店，轻松赚钱', right: 'img/list/iconfont-right.png', hr: true},
+      //{hr: true},
+      //{icon: 'img/list/iconfont-question.png', title: '帮助与反馈', content: '', right: 'img/list/iconfont-right.png', hr: true},
+      //{hr: true}
     ]
 });
